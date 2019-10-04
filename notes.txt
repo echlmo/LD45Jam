@@ -1,3 +1,5 @@
+Name: Offlined
+
 Boot loaded:
 Find memory
 Return
@@ -13,4 +15,7 @@ got to convince your friends you're worth playing with
 Friends make up a standard party
 
 
-your rep in the vr world effects the outer world (represented on your clothes)
+your rep in the vr world effects the outer world (represented on your clothes) maybe represented by colours (based on the bosses you've beaten)
+
+Super limited cyberpunk pallette in the real world
+Highfantasy mmo styyle in the virtual world
