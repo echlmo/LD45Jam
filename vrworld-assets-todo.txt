@@ -2,7 +2,9 @@ Offlined (VR World)
 
 Assets to make:
 - PC sprites - PC is a typical traditional sword-wielding hero
+	> In-battle sprite(s); fight anim; hurt anim?
 - Team sprites: Healer (edgy dark cleric mage healer carrying a cross), Tank/DPS (typical giant barbarian)
+	> Battle sprites
 	> Additional party members (extension): True Tank (acrofatic monk/beggar?), Burst DPS (muscle wizard)
 - Enemy sprites
 - Tile sets (overworld map shit)
