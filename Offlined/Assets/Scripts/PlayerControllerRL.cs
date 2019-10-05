@@ -5,11 +5,9 @@ using UnityEngine;
 
 public class PlayerControllerRL : MonoBehaviour
 {
-	
-	CharacterController CharacterController;
-	public float speed = 6.0f;
-	
+	public float speed = 1.0f;
 	Rigidbody2D Rigidbody;
+	public Animator Animator;
 	
     // Start is called before the first frame update
     void Start()
@@ -21,7 +19,18 @@ public class PlayerControllerRL : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Rigidbody.velocity = new Vector2(6.0f*Input.GetAxis("Horizontal"),0);
+		Rigidbody.velocity = new Vector2(speed*Input.GetAxis("Horizontal"),0);
+		if (Input.GetAxis("Horizontal")<0){
+			transform.localScale = new Vector2(-1,1);
+			Animator.SetBool("Moving",true);
+		}
+		if (Input.GetAxis("Horizontal")>0){
+			transform.localScale = new Vector2(1,1);
+			Animator.SetBool("Moving", true);
+		}
+		if (Input.GetAxis("Horizontal")==0){
+			Animator.SetBool("Moving",false);
+		}
 	}
 	
 	
