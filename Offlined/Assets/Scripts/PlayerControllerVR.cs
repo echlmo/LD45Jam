@@ -8,6 +8,7 @@ public class PlayerControllerVR : MonoBehaviour
 	public float speed = 1.0f;
 	Rigidbody2D Rigidbody;
 	public Animator Animator;
+
 	
     // Start is called before the first frame update
     void Start()
@@ -40,8 +41,7 @@ public class PlayerControllerVR : MonoBehaviour
 		}
 		if (Input.GetAxis("Horizontal")>0){
 			Animator.SetInteger("Y", 1);
-		}
+		}		
 	}
-	
 	
 }

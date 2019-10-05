@@ -9,13 +9,13 @@ public class PlayerControllerRL : MonoBehaviour
 	Rigidbody2D Rigidbody;
 	public Animator Animator;
 	public CameraScript CameraScript;
+	public GameObject LeaveRoomCollider;
 	
     // Start is called before the first frame update
     void Start()
     {
 		Rigidbody = GetComponent<Rigidbody2D>();
     }
-	
 	
     // Update is called once per frame
     void Update()
@@ -33,10 +33,17 @@ public class PlayerControllerRL : MonoBehaviour
 		if (Input.GetAxis("Horizontal")==0){
 			Animator.SetBool("Moving",false);
 		}
+		if (Input.GetButtonDown("Interact")){
+			
+			if(LeaveRoomCollider.GetComponent<BoxCollider2D>().bounds.Contains(this.transform.position))
+				ToStreet();
+		}
 	}
+	
 	//Changing positions inside Real world.
 	void ToStreet(){
 		CameraScript.ParentToObject(this.transform);
 		transform.localPosition = new Vector2(0,-4);
 	}
+	
 }
