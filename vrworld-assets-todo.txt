@@ -1,0 +1,13 @@
+Offlined (VR World)
+
+Assets to make:
+- PC sprites - PC is a typical traditional sword-wielding hero
+- Team sprites: Healer (edgy dark cleric mage healer carrying a cross), Tank/DPS (typical giant barbarian)
+	> Additional party members (extension): True Tank (acrofatic monk/beggar?), Burst DPS (muscle wizard)
+- Enemy sprites
+- Tile sets (overworld map shit)
+- Other object assets e.g. overworld items, weapons etc
+
+Style notes:
+- Fantasy RPG/MMORPG kind of setting (like WOW, but with more JRPG style play and graphics)
+- Version types: ASCII, 8-bit, final version (32-bit); starting with final full version and work downwards later
