@@ -8,7 +8,9 @@ Assets to make:
 	> Additional party members (extension): True Tank (acrofatic monk/beggar?), Burst DPS (muscle wizard)
 - Enemy sprites
 - Tile sets (overworld map shit)
-- Other object assets e.g. overworld items, weapons etc
+- Other object assets e.g. overworld fluff like trees (tile), rocks, bushes, houses
+	> Final boss room
+- Bosses: Slime King & Demon Lord Boss
 
 Style notes:
 - Fantasy RPG/MMORPG kind of setting (like WOW, but with more JRPG style play and graphics)
