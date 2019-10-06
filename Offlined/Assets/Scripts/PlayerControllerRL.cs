@@ -10,6 +10,7 @@ public class PlayerControllerRL : MonoBehaviour
 	public Animator Animator;
 	public CameraScript CameraScript;
 	public GameObject LeaveRoomCollider;
+	public GameObject ToProtagRoomCollider;
 	
     // Start is called before the first frame update
     void Start()
@@ -42,8 +43,12 @@ public class PlayerControllerRL : MonoBehaviour
 	
 	//Changing positions inside Real world.
 	void ToStreet(){
-		CameraScript.ParentToObject(this.transform);
-		transform.localPosition = new Vector2(0,-4);
+		CameraScript.ToStreet(this.transform);
+		transform.localPosition = new Vector2(0.1f,-4.34f);
+	}
+	void ToProtagRoom(){
+		CameraScript.ToProtagRoom();
+		transform.localPosition = new Vector2(-0.371f,-0.02f);
 	}
 	
 }
