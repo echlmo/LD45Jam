@@ -154,11 +154,16 @@ public class PlayerControllerRL : MonoBehaviour
         }
         else if(state.RAM == true && state.Healer == true)
         {
+            CameraScript.ToHEAL();
+            state.level = 50;
+        } else if(state.RAM == true && state.Healer == false)
+        {
             CameraScript.ToRAM();
         }
         else if(state.HardDrive == true)
         {
             CameraScript.ToDRIVE();
+            state.level = 5;
         }
     }
     void Healer()

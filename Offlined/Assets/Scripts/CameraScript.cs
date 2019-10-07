@@ -9,6 +9,11 @@ public class CameraScript : MonoBehaviour
 	float LowerLimit;
 	float YCoord;
     float timer = 0;
+    void Start()
+    {
+        ToBoot();
+    }
+
 	void Update(){
         if (CameraTarget != null)
         {
@@ -48,22 +53,34 @@ public class CameraScript : MonoBehaviour
         CameraTarget = null;
         this.transform.position = new Vector2(0, -1f);
     }
+    public void ToBoot()
+    {
+        CameraTarget = null;
+        this.transform.position = new Vector2(2, -1f);
+        timer = Time.time + 5;
+    }
     public void ToEND()
     {
         CameraTarget = null;
-        this.transform.position = new Vector2(0, -2f);
+        this.transform.position = new Vector2(0, -1f);
         timer = Time.time + 5;
     }
     public void ToRAM()
     {
         CameraTarget = null;
-        this.transform.position = new Vector2(0, -2f);
+        this.transform.position = new Vector2(9, -1f);
+        timer = Time.time + 5;
+    }
+    public void ToHEAL()
+    {
+        CameraTarget = null;
+        this.transform.position = new Vector2(13, -1f);
         timer = Time.time + 5;
     }
     public void ToDRIVE()
     {
         CameraTarget = null;
-        this.transform.position = new Vector2(0, -2f);
+        this.transform.position = new Vector2(5, -1f);
         timer = Time.time + 5;
     }
 }
