@@ -10,14 +10,16 @@ public class CameraScript : MonoBehaviour
 	float YCoord;
 	
 	void Update(){
-		if (CameraTarget !=null){
-			this.transform.position = new Vector2(CameraTarget.position.x, YCoord);
-		}
-		if (this.transform.position.x <LowerLimit)
-				this.transform.position = new Vector2(LowerLimit,this.transform.position.y);
-			if (this.transform.position.x > UpperLimit)
-				this.transform.position = new Vector2(UpperLimit,this.transform.position.y);
-	}
+        if (CameraTarget != null)
+        {
+            this.transform.position = new Vector2(CameraTarget.position.x, YCoord);
+
+            if (this.transform.position.x < LowerLimit)
+                this.transform.position = new Vector2(LowerLimit, this.transform.position.y);
+            if (this.transform.position.x > UpperLimit)
+                this.transform.position = new Vector2(UpperLimit, this.transform.position.y);
+        }
+    }
 	public void ToStreet(Transform PlayerTransform){
 		CameraTarget = PlayerTransform;
 		LowerLimit = 0.63f;
@@ -26,6 +28,16 @@ public class CameraScript : MonoBehaviour
 	}
 	public void ToProtagRoom(){
 		CameraTarget = null;
-		this.transform.position = new Vector2(0,0);
+		this.transform.position = new Vector2(0,0.293f);
 	}
+    public void ToPark()
+    {
+        CameraTarget = null;
+        this.transform.position = new Vector2(0, -2.5f);
+    }
+    public void ToBar()
+    {
+        CameraTarget = null;
+        this.transform.position = new Vector2(0, -1f);
+    }
 }
