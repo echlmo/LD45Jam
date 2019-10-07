@@ -7,6 +7,7 @@ public class PlayerControllerRL : MonoBehaviour
 {
 	public float speed = 1.0f;
 	Rigidbody2D Rigidbody;
+    public State state;
 	public Animator Animator;
 	public CameraScript CameraScript;
 	public GameObject LeaveRoomCollider;
@@ -16,6 +17,8 @@ public class PlayerControllerRL : MonoBehaviour
     public GameObject ReturnToStreetCollider;
     public GameObject ReturnLV50Collider;
     public GameObject LV50Collider;
+    public GameObject GraphicsCollider;
+    public GameObject RamCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,14 +61,28 @@ public class PlayerControllerRL : MonoBehaviour
             {
                 BarReturn();
             }
-            else if (LV50Collider.GetComponent<BoxCollider2D>().bounds.Contains(this.transform.position))
+            else if (LV50Collider.GetComponent<BoxCollider2D>().bounds.Contains(this.transform.position) && state.level >= 50) //also has a level check, need to display this
             {
                 ToPark();
             }
-            else if (HardWareStoreCollider.GetComponent<BoxCollider2D>().bounds.Contains(this.transform.position))
+            else if (HardWareStoreCollider.GetComponent<BoxCollider2D>().bounds.Contains(this.transform.position) && state.level >=5) //also has a level check, need to display this
             {
                 ToBar();
             }
+            //object pickup
+            else if (GarbageCollider.GetComponent<BoxCollider2D>().bounds.Contains(this.transform.position))
+            {
+                HardDrive();
+            }
+            else if (GraphicsCollider.GetComponent<BoxCollider2D>().bounds.Contains(this.transform.position))
+            {
+                GraphicsCard();
+            }
+            else if (RamCollider.GetComponent<BoxCollider2D>().bounds.Contains(this.transform.position))
+            {
+                Ram();
+            }
+            //talk to npc
         }
 	}
 	
@@ -97,5 +114,21 @@ public class PlayerControllerRL : MonoBehaviour
     {
         CameraScript.ToBar();
         transform.position = ReturnToStreetCollider.transform.position;
+    }
+    //Picking up hardware
+    void HardDrive()
+    {
+        GarbageCollider.SetActive(false);
+        state.HardDrive = true;
+    }
+    void GraphicsCard()
+    {
+        GraphicsCollider.SetActive(false);
+        state.Graphics = true;
+    }
+    void Ram()
+    {
+        RamCollider.SetActive(false);
+        state.RAM = true;
     }
 }
