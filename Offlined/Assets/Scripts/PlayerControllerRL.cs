@@ -31,6 +31,10 @@ public class PlayerControllerRL : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("escape"))
+        {
+            Application.Quit();
+        }
 		//Movement
 		Rigidbody.velocity = new Vector2(speed*Input.GetAxis("Horizontal"),0);
 		if (Input.GetAxis("Horizontal")<0){
@@ -164,6 +168,10 @@ public class PlayerControllerRL : MonoBehaviour
         {
             CameraScript.ToDRIVE();
             state.level = 5;
+        }
+        else
+        {
+            CameraScript.ToBoot();
         }
     }
     void Healer()
