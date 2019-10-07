@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\ColliderScript.cs" />
     <Compile Include="Assets\Scripts\PlayerControllerRL.cs" />
     <Compile Include="Assets\Scripts\PlayerControllerVR.cs" />
+    <Compile Include="Assets\Scripts\SpawnEnemy.cs" />
     <Compile Include="Assets\Scripts\State.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Callum/Desktop/LD/LD45Jam/Offlined/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

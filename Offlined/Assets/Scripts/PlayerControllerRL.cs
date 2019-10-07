@@ -31,6 +31,10 @@ public class PlayerControllerRL : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("escape"))
+        {
+            Application.Quit();
+        }
 		//Movement
 		Rigidbody.velocity = new Vector2(speed*Input.GetAxis("Horizontal"),0);
 		if (Input.GetAxis("Horizontal")<0){
@@ -154,11 +158,20 @@ public class PlayerControllerRL : MonoBehaviour
         }
         else if(state.RAM == true && state.Healer == true)
         {
+            CameraScript.ToHEAL();
+            state.level = 50;
+        } else if(state.RAM == true && state.Healer == false)
+        {
             CameraScript.ToRAM();
         }
         else if(state.HardDrive == true)
         {
             CameraScript.ToDRIVE();
+            state.level = 5;
+        }
+        else
+        {
+            CameraScript.ToBoot();
         }
     }
     void Healer()
