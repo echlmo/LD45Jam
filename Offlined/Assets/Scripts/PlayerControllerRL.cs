@@ -19,6 +19,9 @@ public class PlayerControllerRL : MonoBehaviour
     public GameObject LV50Collider;
     public GameObject GraphicsCollider;
     public GameObject RamCollider;
+    public GameObject VRCollider;
+    public GameObject HealerCollider;
+    public GameObject DPSCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,7 +85,19 @@ public class PlayerControllerRL : MonoBehaviour
             {
                 Ram();
             }
-            //talk to npc
+            //talk to npc or enter vr
+            else if (VRCollider.GetComponent<BoxCollider2D>().bounds.Contains(this.transform.position))
+            {
+                VR();
+            }
+            else if (HealerCollider.GetComponent<BoxCollider2D>().bounds.Contains(this.transform.position))
+            {
+                Healer();
+            }
+            else if (DPSCollider.GetComponent<BoxCollider2D>().bounds.Contains(this.transform.position))
+            {
+                DPS();
+            }
         }
 	}
 	
@@ -130,5 +145,28 @@ public class PlayerControllerRL : MonoBehaviour
     {
         RamCollider.SetActive(false);
         state.RAM = true;
+    }
+    void VR()
+    {
+        if (state.Graphics == true && state.DPS == true)
+        {
+            CameraScript.ToEND();
+        }
+        else if(state.RAM == true && state.Healer == true)
+        {
+            CameraScript.ToRAM();
+        }
+        else if(state.HardDrive == true)
+        {
+            CameraScript.ToDRIVE();
+        }
+    }
+    void Healer()
+    {
+        state.Healer = true;
+    }
+    void DPS()
+    {
+        state.DPS = true;
     }
 }
