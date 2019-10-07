@@ -8,7 +8,7 @@ public class CameraScript : MonoBehaviour
 	float UpperLimit;
 	float LowerLimit;
 	float YCoord;
-	
+    float timer = 0;
 	void Update(){
         if (CameraTarget != null)
         {
@@ -18,6 +18,14 @@ public class CameraScript : MonoBehaviour
                 this.transform.position = new Vector2(LowerLimit, this.transform.position.y);
             if (this.transform.position.x > UpperLimit)
                 this.transform.position = new Vector2(UpperLimit, this.transform.position.y);
+        }
+        if (timer != 0)
+        {
+            if(Time.time > timer)
+            {
+                ToProtagRoom();
+                timer = 0;
+            }
         }
     }
 	public void ToStreet(Transform PlayerTransform){
@@ -39,5 +47,23 @@ public class CameraScript : MonoBehaviour
     {
         CameraTarget = null;
         this.transform.position = new Vector2(0, -1f);
+    }
+    public void ToEND()
+    {
+        CameraTarget = null;
+        this.transform.position = new Vector2(0, -2f);
+        timer = Time.time + 5;
+    }
+    public void ToRAM()
+    {
+        CameraTarget = null;
+        this.transform.position = new Vector2(0, -2f);
+        timer = Time.time + 5;
+    }
+    public void ToDRIVE()
+    {
+        CameraTarget = null;
+        this.transform.position = new Vector2(0, -2f);
+        timer = Time.time + 5;
     }
 }
