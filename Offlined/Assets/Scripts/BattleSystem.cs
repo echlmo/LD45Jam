@@ -18,7 +18,7 @@ public class BattleSystem : MonoBehaviour
         foreach (GameObject playerUnit in playerUnits)
         {
             GameUnitStats currentUnitStats = playerUnit.GetComponent<GameUnitStats>();
-            //currentUnitStats.calculateNextActTurn(0);
+            //TODO: Something to calculate next turn and update stats
             unitsStats.Add(currentUnitStats);
         }
 
@@ -26,12 +26,12 @@ public class BattleSystem : MonoBehaviour
         foreach (GameObject enemyUnit in enemyUnits)
         {
             GameUnitStats currentUnitStats = enemyUnit.GetComponent<GameUnitStats>();
-            //currentUnitStats.calculateNextActTurn(0);
+            //TODO: Something to calculate next turn and update stats
             unitsStats.Add(currentUnitStats);
         }
         unitsStats.Sort();
 
-        //Set up next turn
+        //Set up for next turn
 
     }
 

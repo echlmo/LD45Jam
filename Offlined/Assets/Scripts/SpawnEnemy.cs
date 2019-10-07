@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 //Script to trigger a battle upon enemy encounter; transports player to battle scene upon contact with EnemySpawner prefab
