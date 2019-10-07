@@ -7,8 +7,7 @@ Assets to make:
 	> Battle sprites
 	> Additional party members (extension): True Tank (acrofatic monk/beggar?), Burst DPS (muscle wizard)
 - Enemy sprites
-- Tile sets (overworld map shit)
-- Other object assets e.g. overworld fluff like trees (tile), rocks, bushes, houses
+- Tile sets (overworld map shit) e.g. overworld fluff like trees, rocks, bushes, houses
 	> Final boss room
 - Bosses: Slime King & Demon Lord Boss
 
