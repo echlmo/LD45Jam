@@ -1,7 +1,10 @@
 ﻿<Properties StartupConfiguration="{0B00570D-735F-7304-B6A4-9D8971D5464F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpawnEnemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NewMonoBehaviour.cs">
     <Files>
-      <File FileName="Assets/Scripts/SpawnEnemy.cs" Line="19" Column="5" />
+      <File FileName="Assets/Scripts/GamePlayerStats.cs" Line="25" Column="10" />
+      <File FileName="Assets/Scripts/BattleSystem.cs" Line="29" Column="70" />
+      <File FileName="Assets/Scripts/AttackUnit.cs" Line="4" Column="40" />
+      <File FileName="Assets/Scripts/NewMonoBehaviour.cs" Line="4" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
